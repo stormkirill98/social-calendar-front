@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/Month.css"
+import "../css/Month.css"
 import Day from "./Day";
 
 export default class Month extends React.Component {

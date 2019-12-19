@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from 'react-avatar';
 import Grid from "@material-ui/core/Grid";
 import {Card} from "@material-ui/core";
-import "./css/UserCard.css"
+import "../css/UserCard.css"
 import Typography from "@material-ui/core/Typography";
 import SettingsIcon from '@material-ui/icons/Settings';
 import Button from "@material-ui/core/Button";

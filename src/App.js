@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import friends from "./pages/friends";
-//import dialogues from "./pages/dialogues";
+import Friends from "./pages/Friends";
+import Dialogues from "./pages/Dialogues";
 import Event from "./pages/Event";
-import Main from "./pages/Main"
+import Login from "./pages/Login"
 import Calendar from "./pages/Calendar"
 
 export default class Routing extends React.Component {
@@ -14,9 +14,9 @@ export default class Routing extends React.Component {
                     <Route path="/Calendar" component={Calendar} />
                     <Route path="/Eventid=:id" component={Event} />
                     <Route path="/Event" component={Event} />
-                    <Route path="/dialogues" component={dialogues} />
-                    <Route path="/friends" component={friends} />
-                    <Route path="/" component={Main} />
+                    <Route path="/Dialogues" component={Dialogues} />
+                    <Route path="/Friends" component={Friends} />
+                    <Route path="/" component={Login} />
                 </Switch>
             </Router>
         );
