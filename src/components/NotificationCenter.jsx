@@ -1,6 +1,6 @@
 import React from "react";
 import Notification from "./Notification";
-import "./css/NotificationCenter.css"
+import "../css/NotificationCenter.css"
 import NotificationsNoneIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Button from "@material-ui/core/Button";
 

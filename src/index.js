@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 import Routing from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Routing/>, document.getElementById('root'));
 

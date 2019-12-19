@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/EventList.css"
+import "../css/EventList.css"
 
 
 export default class EventList extends React.Component {

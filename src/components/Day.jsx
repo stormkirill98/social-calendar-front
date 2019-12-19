@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/Day.css"
+import "../css/Day.css"
 
 export default class Header extends React.Component {
     render() {

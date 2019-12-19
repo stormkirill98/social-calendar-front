@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import "./css/Header.css"
+import "../css/Header.css"
 import Form from "react-bootstrap/Form";
 import UserCard from "./UserCard";
 
