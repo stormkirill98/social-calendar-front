@@ -6,23 +6,25 @@
     margin-bottom: 3px;
 }
 
-.notifications-btn {
+.notifications-center {
     height: 25px;
+    padding-top: 2px !important;
     flex-grow: 1;
 }
 
 .settings-btn {
     height: 25px;
+    padding-top: 2px !important;
     flex-grow: 1;
 }
 
-.notifications-btn + .settings-btn {
-    margin-left: 2px;
+.notifications-center + .settings-btn {
+    margin-left: 10px;
 }
 
 .buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 

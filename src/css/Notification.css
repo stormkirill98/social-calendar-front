@@ -1,15 +1,20 @@
-.decline-btn {
+.decline-btn:nth-child(1) {
     width: 30px;
 }
 
-.accept-btn {
+.accept-btn:nth-child(1) {
     width: 25px;
 }
 
-.content {
-
+.content:nth-child(5) {
+    display: inline-block;
 }
 
-.type {
-    
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.type-icon:nth-child(1) {
 }

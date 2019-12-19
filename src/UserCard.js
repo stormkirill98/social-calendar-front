@@ -4,10 +4,9 @@ import Grid from "@material-ui/core/Grid";
 import {Card} from "@material-ui/core";
 import "./css/UserCard.css"
 import Typography from "@material-ui/core/Typography";
-import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import SettingsIcon from '@material-ui/icons/Settings';
 import Button from "@material-ui/core/Button";
-import NotificationList from "./NotificationList";
+import NotificationCenter from "./NotificationCenter";
 
 export default class UserCard extends React.Component {
 
@@ -15,15 +14,25 @@ export default class UserCard extends React.Component {
         super(props);
 
         this.state = {
-            invoices: [{info: "asdasdasdas dasd as dasdasdasd"}, {info: "asdasdasdas dasd as dasdasdasd"},
-                {info: "asdasdasdas dasd as dasdasdasd"}, {info: "asdasdasdas dasd as dasdasdasd"}],
+            invites: [{
+                id: 101332313,
+                type: "friend",
+                sender_id: 12341,
+                sender_name: "Vasya Pupkin"
+            }, {
+                id: 10123789813,
+                type: "event",
+                sender_id: 12341,
+                event_name: "Happy Birthday"
+            }, {
+                id: 101672313,
+                type: "friend",
+                sender_id: 12341,
+                sender_name: "Artur Milasian"
+            }],
             userName: "Kirill Panihin",
             pictureUrl: "https://lh3.googleusercontent.com/a-/AAuE7mAd99fGmysqUPELQf17X25h6P_Ovketo5vlsncv"
         };
-    }
-
-    toggleNotifications() {
-
     }
 
     render() {
@@ -37,18 +46,15 @@ export default class UserCard extends React.Component {
                         </Typography>
                     </Card>
                     <div className="buttons">
-                        <Button variant="contained" color="primary" className="notifications-btn" size="small"
-                                onClick={this.toggleNotifications()}>
-                            {this.state.invoices.length}
-                            <NotificationsNoneIcon fontSize="small"/>
-                        </Button>
+                        <NotificationCenter invites={this.state.invites} className="notifications-center"/>
 
                         <Button variant="contained" color="primary" className="settings-btn" size="small">
                             <SettingsIcon fontSize="small"/>
                         </Button>
                     </div>
                 </Grid>
-                <NotificationList/>
+
+
             </Grid>
         );
     }
