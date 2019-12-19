@@ -1,8 +1,10 @@
 import React from 'react';
-import Header from "./Header";
+import Calendar from "./Calendar";
 
 export default function App() {
-  return (
-    <Header/>
-  );
+    return (
+        <>
+            <Calendar/>
+        </>
+    );
 }
