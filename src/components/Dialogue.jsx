@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/dialogues.css';
+import '../css/Dialogues.css';
 
 
 export default class Dialogue extends React.Component {
