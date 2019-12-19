@@ -9,7 +9,7 @@ export default class Friend extends React.Component {
                 <li class="friend">
                     <div class="wrap">
                     <img class="friend-avatar" src="img/asd.png" alt="аватарка друга"/>
-                        <a href="">Катя</a>
+                        <a href="/Dialogues">Катя</a>
                     </div>
                     <div class="wrap">
                         <button class="button1">Перейти к чату</button>
