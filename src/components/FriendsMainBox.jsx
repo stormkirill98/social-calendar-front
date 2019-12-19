@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/dialogues.css';
+import '../css/Dialogues.css';
 import Friend from "../components/Friend";
 
 

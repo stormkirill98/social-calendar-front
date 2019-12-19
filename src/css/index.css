@@ -8,8 +8,25 @@
     src: url(./../fonts/Algerian.TTF);
 }
 
+
+
+.wrap-index-main{
+    position: absolute;
+    background-image: url(../img/Auth-background.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position-x: center;
+    min-width: 320px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
 .main{
     position: relative;
+    height: auto !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,9 +44,13 @@
     margin-top: 15vh;
 }
 
-.sign-button{
+.google-img{
     width: 198px;
     cursor: pointer;
+}
+
+.defoult-titel{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (max-width: 1367px) { 
@@ -37,7 +58,7 @@
         font-size: 100px;
     }
 
-    .sign-button{
+    .google-img{
         width: 132px;
     }
 }
@@ -47,7 +68,7 @@
         font-size: 50px;
     }
 
-    .sign-button{
+    .google-img{
         width: 99px;
     }
 }
@@ -57,7 +78,7 @@
         font-size: 40px;
     }
 
-    .sign-button{
+    .google-img{
         width: 79px;
     }
 }
@@ -67,7 +88,7 @@
         font-size: 30px;
     }
 
-    .sign-button{
+    .google-img{
         width: 66px;
     }
 }
