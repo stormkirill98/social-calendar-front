@@ -5,7 +5,7 @@ import Dialog from "../components/dialogue";
 import Message from "../components/Message";
 
 
-export default class dialogues extends React.Component {
+export default class Dialogues extends React.Component {
     render() {
         return (
             <>

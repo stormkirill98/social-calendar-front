@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/Friends.css";
 import Header from "../components/Header";
-import Friend from "../components/friend";
+import Friend from "../components/Friend";
 
 
-export default class friends extends React.Component {
+export default class Friends extends React.Component {
     render() {
         return (
           <>

@@ -1,59 +1,28 @@
-import React from 'react';
-import '../css/Header.css';
+import React from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import "./css/Header.css"
+import Form from "react-bootstrap/Form";
+import UserCard from "./UserCard";
 
 export default class Header extends React.Component {
     render() {
         return (
-            <>
-                <header className="bg-success">
-                    <nav className="nav navbar-light">
-                        <div className="button">
-                            <input type="checkbox" id="hmt" className="hidden-menu-ticker" />
-                            <label className="btn-menu" htmlFor="hmt">
-                                <span className="first"></span>
-                                <span className="second"></span>
-                                <span className="third"></span>
-                            </label>
-                            <ul className="hidden-menu">
-                                <a className="hidden-menu-brand" href="/Calendar">Social Calendar</a>
-                                <li className="left-link"><a href="/Calendar">Календарь</a></li>
-                                <li className="left-link"><a href="friends">Друзья</a></li>
-                                <li className="left-link"><a href="dialogues">Чаты</a></li>
-                            </ul>
-                        </div>
-                        <a className="navbar-brand" href="Calendar">Social Calendar</a>
-                        <li className="nav-item">
-                            <a className="nav-link" href="Calendar">Календарь</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="friends">Друзья</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="dialogues">Чаты</a>
-                        </li>
-                    </nav>
-                    <div className="auth-box">
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="#home" className="title">Social Calendar</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav>
+                        <Nav.Link href="#calendar">Календарь</Nav.Link>
+                        <Nav.Link href="#friends">Друзья</Nav.Link>
+                        <Nav.Link href="#chats">Чаты</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
 
-                        <div className="auth-left">
-                            <a href="Calendar" className="auth-img">
-                                <img src="img/icon.JPG" width="50" height="50" alt="Аватарка" />
-                            </a>
-                        </div>
-
-                        <div className="auth-right">
-                            <a className="auth-name" href="Calendar">Семён Петрович</a>
-                            <div className="icons">
-                                <a href="Options">
-                                    <img className="options" src="img/settings.png" alt="Настройки" />
-                                </a>
-                                <a href="Notifications">
-                                    <img className="notification" src="img/notifications.png" alt="Оповещения" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-            </>
+                <Form inline>
+                    <UserCard/>
+                </Form>
+            </Navbar>
         );
     }
 }
