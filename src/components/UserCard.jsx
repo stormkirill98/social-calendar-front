@@ -31,8 +31,15 @@ export default class UserCard extends React.Component {
                 sender_name: "Artur Milasian"
             }],
             userName: "Kirill Panihin",
-            pictureUrl: "https://lh3.googleusercontent.com/a-/AAuE7mAd99fGmysqUPELQf17X25h6P_Ovketo5vlsncv"
+            pictureUrl: this.getPicture()
+
+            //"https://lh3.googleusercontent.com/a-/AAuE7mAd99fGmysqUPELQf17X25h6P_Ovketo5vlsncv"
         };
+    }
+
+    getPicture(){
+        //const auth = window.gapi.auth2.getAuthInstance()
+        return "https://lh3.googleusercontent.com/a-/AAuE7mAd99fGmysqUPELQf17X25h6P_Ovketo5vlsncv"
     }
 
     render() {
