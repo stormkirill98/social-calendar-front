@@ -12,9 +12,7 @@ export default class Month extends React.Component {
 
         let year = 2019, month = 12;
 
-        console.log(new Date(year, month - 1, 1));
-        console.log(monthDays(year, month));
-        console.log(firstWeekDay(year, month));
+        const icon1 = encodeImage(Icon1), icon2 = encodeImage(Icon2);
 
         this.state = {
             countDays: monthDays(year, month),
@@ -29,17 +27,37 @@ export default class Month extends React.Component {
                         datetime: "23.11.2019 19:00",
                         address: "address",
                         description: "desciption fasadsa",
-                        icon: Icon1
+                        icon: icon1
                     },
                     {
-                        id: "12441",
+                        id: "1242241",
                         type: "group",
                         name: "Second Event",
                         is_private: "true",
                         datetime: "23.11.2019 19:00",
                         address: "address",
                         description: "desciption fasadsa",
-                        icon: Icon2
+                        icon: icon2
+                    },
+                    {
+                        id: "12441",
+                        type: "group",
+                        name: "First Event",
+                        is_private: "true",
+                        datetime: "23.11.2019 19:00",
+                        address: "address",
+                        description: "desciption fasadsa",
+                        icon: icon1
+                    },
+                    {
+                        id: "1242241",
+                        type: "group",
+                        name: "Second Event",
+                        is_private: "true",
+                        datetime: "23.11.2019 19:00",
+                        address: "address",
+                        description: "desciption fasadsa",
+                        icon: icon2
                     }
                 ],
             }
@@ -78,6 +96,21 @@ function monthDays(y, m)    // full year and month in range 1-12
 }
 
 function firstWeekDay(y, m) {
-    const days = [7, 1, 2, 3, 4, 5, 6];
     return new Date(y, m - 1, 0).getDay();
+}
+
+async function encodeImage(src) {
+    const canvas = document.createElement('canvas'),
+        ctx = canvas.getContext('2d'),
+        img = new Image();
+
+    img.onload = await function () {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+    };
+
+    img.src = src;
+
+    return canvas.toDataURL();
 }
