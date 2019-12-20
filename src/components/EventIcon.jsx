@@ -12,15 +12,21 @@ export default class EventIcon extends React.Component {
         }
     }
 
-    render() {
-        console.log(this.state.name);
-        console.log(this.state.icon);
-        console.log(this.state.time);
+    toggleInfo(hidden) {
+        this.info.hidden = hidden;
+    }
 
+    render() {
         return (
             <div>
                 {this.state.icon ?
-                    <img className="event-icon" src={require("../SVG_icon/burger.svg")} width={35} height={35} alt="icon"/> : ''}
+                    <img className="event-icon" src={require("../SVG_icon/burger.svg")} alt="icon"
+                         onMouseEnter={() => this.toggleInfo(false)}
+                         onMouseLeave={() => this.toggleInfo(true)}/> : ''}
+
+                <div className="event-info" hidden ref={ref => this.info = ref}>
+                    {this.state.name} <br/> {this.state.time}
+                </div>
             </div>
         );
     }
