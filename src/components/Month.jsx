@@ -10,13 +10,11 @@ export default class Month extends React.Component {
     constructor(props) {
         super(props);
 
-        let year = 2019, month = 12;
-
         const icon1 = encodeImage(Icon1), icon2 = encodeImage(Icon2);
 
         this.state = {
-            countDays: monthDays(year, month),
-            firstDayOfWeek: firstWeekDay(year, month),
+            countDays: monthDays(props.year, props.month),
+            firstDayOfWeek: firstWeekDay(props.year, props.month),
             events: {
                 1: [
                     {

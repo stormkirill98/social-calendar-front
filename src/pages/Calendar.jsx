@@ -5,12 +5,25 @@ import EventList from "../components/EventList";
 import "../css/Calendar.css"
 
 export default class Calendar extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            curYear: 2019,
+            curMonth: 12
+        }
+    }
+
     render() {
         return (
             <div className="page-container">
                 <Header/>
+
+
+
                 <div className="calendar-container">
-                    <Month/>
+                    <Month year={this.state.curYear} month={this.state.curMonth}/>
                     <EventList/>
                 </div>
             </div>
