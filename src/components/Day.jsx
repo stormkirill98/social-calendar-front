@@ -6,14 +6,18 @@ export default class Header extends React.Component {
         super(props);
 
         this.state = {
-            hidden: props.hidden
+            events: props.events
         }
     }
 
     render() {
-        return (
-            <div className="day-plate" style={this.state.hidden ? {visibility: 'hidden'} : {}}>
+        const style = {
+            visibility: this.props.hidden ? 'hidden' : 'visible',
+        };
 
+        return (
+            <div className="day-plate" style={style}>
+                {this.props.day}
             </div>
         );
     }
