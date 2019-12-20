@@ -11,11 +11,14 @@ export default class Routing extends React.Component {
         return (
             <Router>
                 <Switch>
+                    
                     <Route path="/Calendar" component={Calendar} />
-                    <Route path="/Eventid=:id" component={Event} />
-                    <Route path="/Event" component={Event} />
+                    <Route path="/Event-id=:id" component={Event} />
+                    <Route path="/Event" component={Event} />{/* Это потом убрать */}
                     <Route path="/Dialogues" component={Dialogues} />
                     <Route path="/Friends" component={Friends} />
+
+                    {/* Новые страницы впихивать перед этим комментом   */}
                     <Route path="/" component={Login} />
                 </Switch>
             </Router>

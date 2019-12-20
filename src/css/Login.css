@@ -42,13 +42,17 @@
     margin-top: 15vh;
 }
 
-.google-img{
-    width: 198px;
-    cursor: pointer;
-}
-
 .defoult-titel{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.google-auth-button{
+    margin-top: 7vh;
+    width: 198px;
+    height: 42px;
+    border: 0px solid black;
+    background: url(../img/SingInWithGoogle.png);
+    background-repeat: round;
 }
 
 @media (max-width: 1367px) { 
@@ -56,8 +60,9 @@
         font-size: 100px;
     }
 
-    .google-img{
+    .google-auth-button{
         width: 132px;
+        height: 28px;
     }
 }
 
@@ -66,8 +71,9 @@
         font-size: 50px;
     }
 
-    .google-img{
+    .google-auth-button{
         width: 99px;
+        height: 21px;
     }
 }
 
@@ -76,8 +82,9 @@
         font-size: 40px;
     }
 
-    .google-img{
+    .google-auth-button{
         width: 79px;
+        height: 17px;
     }
 }
 
@@ -86,7 +93,8 @@
         font-size: 30px;
     }
 
-    .google-img{
+    .google-auth-button{
         width: 66px;
+        height: 14px;
     }
 }

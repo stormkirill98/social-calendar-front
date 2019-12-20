@@ -71,22 +71,29 @@ export default class Event extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            eventID : -1,
+            eventID: -1,
         };
         this.getEventData();
     }
 
     async getEventData() {
-        console.log(this.props.match.params.id);
-        // fetch(`https://127.0.0.1:5000/event?id=${this.props.match.params.id}`).then((response) => {
-        //     if (response.ok) {
-        //         response.json().then((data) => {
-        //             console.log(data);
-        //         })
-        //     } else {
-        //         console.log(response.statusText);
-        //     }
-        // });
+        console.log("id=" + this.props.match.params.id);
+        // ${this.props.match.params.id}
+        fetch("https://social-calendar-tensor.herokuapp.com/event?id=5dd15fb805b75899b9af57b1").then((response) => {
+            if (response.ok) {
+                response.json().then((data) => {
+                    console.log(data);
+                })
+            } else {
+                console.log(response.statusText);
+            }
+        });
+        // const responce = await fetch(
+        //     `social-calendar-tensor.herokuapp.com/event?id=${this.props.match.params.id}`
+        // );
+        // const jsonData = await responce.json();
+        // console.log(jsonData);
+        // return 1;
     }
 
 }

@@ -18,14 +18,17 @@
     flex-grow: 1;
 }
 
-.notifications-center + .settings-btn {
+.notifications-center,
+.settings-btn {
+    margin: 0;
     margin-left: 10px;
 }
 
 .buttons {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+
 }
 
 .user-info {
