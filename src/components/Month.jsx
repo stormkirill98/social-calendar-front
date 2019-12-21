@@ -65,12 +65,33 @@ export default class Month extends React.Component {
     render() {
         const days = [], firstDay = this.state.firstDayOfWeek, countDays = this.state.countDays;
 
+        for (let i = 1; i <= 7; i++) {
+            switch (i) {
+                case 1: days.push(<div className="day-name"></div>);
+                    break;
+                case 2: days.push(<div className="day-name"></div>);
+                    break;
+                case 3: days.push(<div className="day-name"></div>);
+                    break;
+                case 4: days.push(<div className="day-name"></div>);
+                    break;
+                case 5: days.push(<div className="day-name"></div>);
+                    break;
+                case 6: days.push(<div className="day-name"></div>);
+                    break;
+                case 7: days.push(<div className="day-name"></div>);
+                    break;
+                default: break;
+            }
+
+        }
+
         for (let i = 0; i < firstDay; i++) {
-            days.push(<Day key={-i} hidden={true}/>)
+            days.push(<Day key={100+i} hidden={true} />)
         }
 
         for (let i = 0; i < countDays; i++) {
-            days.push(<Day key={i + 1} hidden={false} day={i + 1} events={this.state.events[i + 1]}/>)
+            days.push(<Day key={i + 1} hidden={false} day={i + 1} events={this.state.events[i + 1]} />)
         }
 
 
