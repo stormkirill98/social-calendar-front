@@ -8,7 +8,7 @@ import UserCard from "./UserCard";
 export default class Header extends React.Component {
     render() {
         return (
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" className="navbar">
                 <Navbar.Brand href="Calendar" className="title">Social Calendar</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">

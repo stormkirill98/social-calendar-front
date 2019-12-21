@@ -13,9 +13,8 @@ export default class Header extends React.Component {
 
     render() {
         const style = {
-            visibility: this.props.hidden ? 'hidden' : 'visible',
+            opacity: this.props.hidden ? 0.4 : 0.92,
         };
-
 
         const icons = this.state.events.map(
             (val) => <EventIcon key={val.id} name={val.name} time={val.datetime.substr(-5).trim()} icon={val.icon}/>);
