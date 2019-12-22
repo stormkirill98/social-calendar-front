@@ -18,7 +18,7 @@ export default class Month extends React.Component {
             events: {
                 1: [
                     {
-                        id: "12441",
+                        id: "124412",
                         type: "group",
                         name: "First Event",
                         is_private: "true",
@@ -28,7 +28,7 @@ export default class Month extends React.Component {
                         icon: icon1
                     },
                     {
-                        id: "1242241",
+                        id: "12422412",
                         type: "group",
                         name: "Second Event",
                         is_private: "true",
@@ -70,12 +70,12 @@ export default class Month extends React.Component {
 
         //названия дней недели
         for (let i = 0; i < 7; i++) {
-            days.push(<div className="day-name"></div>);
+            days.push(<div className="day-name" key={100+i}></div>);
         }
 
         //предыдущий месяц
         for (let i = 0; i < firstDay; i++) {
-            days.push(<Day key={countDaysPrevMonth - firstDay + 1 + i}
+            days.push(<Day key={-i}
                 hidden={true} day={countDaysPrevMonth - firstDay + 1 + i} />)
         }
 
@@ -86,7 +86,7 @@ export default class Month extends React.Component {
 
         //след месяц
         for (let i = 0; i < 42 - countDays - firstDay; i++) {
-            days.push(<Day key={i + 1} hidden={true} day={i + 1} />)
+            days.push(<Day key={countDays + i + 1} hidden={true} day={i + 1} />)
         }
 
         return (
