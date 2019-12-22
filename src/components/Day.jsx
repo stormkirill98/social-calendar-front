@@ -17,7 +17,7 @@ export default class Header extends React.Component {
         };
 
         const icons = this.state.events.map(
-            (val) => <EventIcon key={val.id} name={val.name} time={val.datetime.substr(-5).trim()} icon={val.icon}/>);
+            (val) => <EventIcon key={val.id} eventID={val.id} name={val.name} time={val.datetime.substr(-5).trim()} icon={val.icon}/>);
 
         return (
             <div className="day-plate" style={style}>
