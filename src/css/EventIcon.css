@@ -1,0 +1,30 @@
+.event-icon {
+    background: yellowgreen;
+    border-radius: 5px;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.event-icon:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.event-info {
+    padding: 10px;
+
+    position: absolute;
+    width: max-content;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 5px;
+    color: black;
+
+    font-size: 14pt;
+    z-index: 999;  /*эта хрень не робит */
+    margin-top: -120px;
+    margin-left: -300px;
+    max-width: 300px;
+}

@@ -1,4 +1,3 @@
-.day-name,
 .day-plate{
     background: #3D3D3D;
     display: flex;
@@ -9,27 +8,42 @@
     border-radius: 5px;
     border: 4px solid rgba(0, 0, 0, 0);
     min-width: 100px;
+
+    font-size: 40px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    min-height: 120px;
+    z-index: 1;
 }
 
 .day-name {
     font-size: 30px;
     border-radius: 2px;
-    /* min-width: 85px; */
-}
-
-.day-plate {
-    font-size: 40px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    min-height: 100px;
-}
-
-.day-plate::before {
-    counter-increment: day;
-    content: counter(day);
 }
 
 .day-plate:hover {
     cursor: pointer;
     box-shadow: none;
     border: 4px solid rgb(50, 50, 50);
+}
+
+.mini-events{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mimi-events div{
+    margin-right: 5px;
+}
+
+.addEventButton{
+    background: rgb(241, 241, 228);
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.addEventButton:hover {
+    transform: scale(1.1) rotate(10deg);
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Notification from "./Notification";
-import "./css/NotificationCenter.css"
+import "../css/NotificationCenter.css"
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import NotificationsNoneIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Button from "@material-ui/core/Button";
 
@@ -10,11 +11,29 @@ export default class NotificationCenter extends React.Component {
         super(props);
 
         this.state = {
-            invites: props.invites
+            invites: []
         };
 
         this.toggle = this.toggle.bind(this);
         this.removeInvite = this.removeInvite.bind(this);
+        this.getInvites = this.getInvites.bind(this);
+
+        this.getInvites()
+
+    }
+
+    getInvites() {
+        fetch("/invites").then((response) => {
+            if (response.ok) {
+                response.json().then((data) => {
+                    this.setState({
+                        invites: data ? data : []
+                    });
+                })
+            } else {
+                console.log(response.statusText);
+            }
+        });
     }
 
     toggle() {
@@ -23,10 +42,9 @@ export default class NotificationCenter extends React.Component {
     }
 
     removeInvite(id) {
-        console.log("remove " + id);
         const invites = this.state.invites;
 
-        this.setState({invites: invites.filter((value => value.id !== id))});
+        this.setState({invites: invites.filter(value => value.id !== id)});
     }
 
     render() {
@@ -39,6 +57,7 @@ export default class NotificationCenter extends React.Component {
                         onClick={this.toggle}>
                     {this.state.invites.length === 0 ? "" : this.state.invites.length}
                     <NotificationsNoneIcon size="small"/>
+                    <NotificationsIcon fontSize="small" />
                 </Button>
 
                 <div ref={ref => this.widget = ref} className="hide">

@@ -1,11 +1,30 @@
 .month-grid {
-    width: 70%;
     flex: 1 auto;
     display: grid;
     padding: 20px;
     border-width: 2px;
-    background: rgb(129, 122, 122);
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows:  0.5fr repeat(5, 1fr);
-    gap: 20px;
+    grid-template-rows:  0.5fr repeat(6, 1fr);
+    gap: 5px 10px;
+}
+
+.arrow-button{
+
+    border: 0;
+    background: #3d3d3d00;
+    border-radius: 4px;
+    color: white;
+    padding: 0 10px;
+}
+
+.month-year{
+    padding: 0;
+    margin-left: 10px;
+}
+
+.other-user-name{
+    display: none;
+    height: 35px;
+    position: absolute;
+    left: 10px;
 }
